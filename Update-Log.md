@@ -3,7 +3,7 @@
 #### | 31-10-26
   - Added scripts for the activation structures and a counter script for the teleporter. **TLDR:** Finished basic gameplay sequence functionality for the upper part of Everveil's Map.
   - Added grass sound effects when the player walks over grass or dirt covered with leaves.
-  - Created optimization script for transition between acts.
+  - Created and implemented an optimization script for transitions between acts.
 
 #### | 30-10-26
   - Added the teleporter to the upper part of Everveil's map
