@@ -2,41 +2,31 @@
 
 # Bug Fix Log: [Player and World Collision Bug]
 
-**Date:** 29-10-2026
-**Status:** $\color{green}{\text{Fixed}}$ 
-**System:** [e.g., Audio / UCC v3 Surface System]
+#### Date: 29-10-2026
+#### Status: $\color{green}{\text{Fixed}}$
+#### System: General Interaction with World
 
 ---
 
-## 📝 The Problem
-A brief, 2-sentence summary of what broke and how it affected the game.
-* **What went wrong:** [e.g., Character didn't play grass footstep sounds when walking on the terrain.]
-* **Player Impact:** [e.g., Complete silence when moving, ruining game immersion.]
+## The Problem
+* **What went wrong:** The character, when sprinting against buildings from the asset Sci-fi Kit Vol 4, would be launched at high speeds sideways away from the sprinting position in the direction they were sprinting. This action, on some occasions, clipped the player through the terrain. The player was also shaking on the aforementioned GameObjects.
 
 ---
 
-## 🔍 The Investigation
-Show your step-by-step logic for finding the root cause.
-1. **The Test:** Tested footsteps on a basic 3D cube with a Surface Identifier (this worked perfectly).
-2. **The Discovery:** Realized the issue was isolated strictly to the **Unity Terrain**.
-3. **The Root Cause:** UCC v3's `Surface Manager` could not identify the ground material because the terrain's grass texture was not registered in the asset mapping configuration.
+##  The Investigation
+
+1. **The Test:** Tested sprinting with normal GameObjects with a normal basic Box Collider and Mesh Collider.
+2. **The Discovery:** Realized the issue was due to the presence of the **Common Map** physics material.
+3. **The Root Cause:** Opsive's Ultimate Character Controller Version 3.0.11 has its own custom movement script; when this script interacts with the aforementioned physics material, it causes the bounciness to increase. It starts with an acceleration followed by a launch.
 
 ---
 
-## 🛠️ The Fix
-Clear steps showing how you solved it.
-1. **Asset Mapping:** Opened the scene's global `Surface Manager`.
-2. **Texture Link:** Linked the specific terrain grass texture asset directly to our custom `Grass` **Surface Type**.
-3. **Audio Tweaks:** Set up random pitch variance (`0.95` to `1.05`) in the UCC **Audio Config** to keep the sound from sounding repetitive.
+## The Fix
+
+1. **Edited Physics Materials:** Set the physics material for all GameObjects related to structures in Sci-fi Kit Vol4 to none in Prefab Mode.
 
 ---
 
 ## 💡 What I Learned
-A quick takeaway that proves your growth as a developer.
-* *[e.g., Frameworks like UCC v3 require texture-to-surface mapping definitions to read terrain data properly. I need to register new biome textures here immediately when adding them to the game.]*
 
----
-
-## 🎥 Before & After
-* **Before:** [Link to screenshot/GIF or short description]
-* **After:** [Link to screenshot/GIF or short description]
+* When designing a world, I should strive to make the colliders of GameObjects as simple as possible.
