@@ -3,7 +3,7 @@
 #### | 1-11-26
   - Finalized Everveil Map Design.
   - Completed design of Act II's map. (with limited functionality)
-  - Completed design of Act III's map. (with limited functionality)
+  - Created map of Act III. (with limited functionality) **(unfinished)**
 
 #### | 31-10-26
   - Added scripts for the activation structures and a counter script for the teleporter. **TLDR:** Finished basic gameplay sequence functionality for Act I of Everveil's Map.
