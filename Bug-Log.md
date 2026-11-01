@@ -1,5 +1,38 @@
 # Bug Log
 
+## Bug Fix Log: [Unnatural Player Bend]
+
+#### Date: 
+#### Status: $\color{red}{\text{Pending}}$
+#### System: 
+
+---
+
+### The Problem
+* **What went wrong:** The character, when moving the camera a certain way, would bend along the hip. The head would be bent to where the feet are.
+
+---
+
+###  The Investigation
+
+1. **The Test:** 
+2. **The Discovery:** 
+3. **The Root Cause:** 
+
+---
+
+### The Fix
+
+1. 
+
+---
+
+### What I Learned
+
+* 
+
+#
+
 ## Bug Fix Log: [Player and World Collision Bug]
 
 #### Date: 29-10-2026
