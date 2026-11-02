@@ -1,5 +1,9 @@
 # Update Log
 
+#### | 2-11-26
+  - Modified Optimization Script.
+  - Completed design of Act III's map. (with limited functionality)
+
 #### | 1-11-26
   - Finalized Everveil Map Design.
   - Completed design of Act II's map. (with limited functionality)
