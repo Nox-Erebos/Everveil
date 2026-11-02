@@ -9,7 +9,7 @@
   - Completed design of Act II's map. (with limited functionality)
   - Created map of Act III. (with limited functionality) **(unfinished)**
 
-#### | 31-10-26 [Saturday] (4h 35mins)
+#### | 31-10-26 [Saturday] (6h 35mins)
   - Added scripts for the activation structures and a counter script for the teleporter. **TLDR:** Finished basic gameplay sequence functionality for Act I of Everveil's Map.
   - Added grass sound effects when the player walks over grass or dirt covered with leaves.
   - Created and implemented an optimization script for transitions between acts.
